@@ -19,6 +19,7 @@ class Pokemon
     name_type = db.execute("SELECT name, type FROM pokemon WHERE id = ?", id).flatten
     pname = name_type[0]
     ptype = name_type[1]
-    Pokemon.new(id: id, name: pname, type: ptype, db: db)
+    hp = 60
+    Pokemon.new(id: id, name: pname, type: ptype, db: db, hp: hp)
   end
 end
