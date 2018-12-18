@@ -19,6 +19,7 @@ class Pokemon
     name_type = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
     pname = name_type[1]
     ptype = name_type[2]
+    hp = name_type[3]
     binding.pry
     Pokemon.new(id: id, name: pname, type: ptype, db: db)
   end
