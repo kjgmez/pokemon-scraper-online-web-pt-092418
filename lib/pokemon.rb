@@ -20,7 +20,7 @@ class Pokemon
     pname = name_type[1]
     ptype = name_type[2]
     hp = name_type[3]
-    binding.pry
+    #binding.pry
     Pokemon.new(id: id, name: pname, type: ptype, db: db, hp: hp)
   end
   def alter_hp(hp, db)
