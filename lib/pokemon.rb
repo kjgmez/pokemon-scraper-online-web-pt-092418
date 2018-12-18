@@ -20,7 +20,7 @@ class Pokemon
     pname = name_type[0]
     ptype = name_type[1]
     php = name_type[2]
-    Pokemon.new(id: id, name: pname, type: ptype, db: db, hp: = php)
+    Pokemon.new(id: id, name: pname, type: ptype, db: db, hp: php)
   end
   def alter_hp(hp, db)
     db.execute("UPDATE pokemon SET hp = #{hp} WHERE id = #{self.id}")
