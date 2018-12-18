@@ -19,6 +19,7 @@ class Pokemon
     name_type = db.execute("SELECT name, type, hp FROM pokemon WHERE id = ?", id).flatten
     pname = name_type[0]
     ptype = name_type[1]
+    php = name_type[2]
     Pokemon.new(id: id, name: pname, type: ptype, db: db)
   end
   def alter_hp(hp, db)
