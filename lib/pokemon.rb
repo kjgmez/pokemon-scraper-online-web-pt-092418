@@ -21,7 +21,7 @@ class Pokemon
     ptype = name_type[1]
     Pokemon.new(id: id, name: pname, type: ptype, db: db)
   end
-  def alter_hp(hp, db)
+  def self.alter_hp(hp, db)
     db.execute("UPDATE hp FROM pokemon WHERE name = Pikachu")
   end
 end
