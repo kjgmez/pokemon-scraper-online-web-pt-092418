@@ -16,7 +16,7 @@ class Pokemon
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
   end
   def self.find (id, db)
-    name_type = db.execute("SELECT name, type FROM pokemon WHERE id = ?", id).flatten
+    name_type = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
     pname = name_type[0]
     ptype = name_type[1]
     binding.pry
